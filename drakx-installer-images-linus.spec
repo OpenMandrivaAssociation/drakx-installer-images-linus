@@ -1,6 +1,6 @@
 %define base_name drakx-installer-images
 %define name %{base_name}-linus
-%define version 1.20
+%define version 1.22
 %define release %mkrel 1
 %define theme 	Free
 
@@ -20,7 +20,7 @@ License: GPL
 Group:   Development/Other
 Url:     http://wiki.mandriva.com/Tools/DrakX
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: kernel-linus-latest >= 2.6.23-0.rc5.1mdv
+BuildRequires: kernel-linus-latest >= 2.6.23-0.rc6.1mdv
 %ifarch %ix86 x86_64
 BuildRequires: memtest86+
 BuildRequires: grub
