@@ -19,6 +19,7 @@ Patch0:  %{name}.patch
 License: GPL
 Group:   Development/Other
 Url:     http://wiki.mandriva.com/Tools/DrakX
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: kernel-linus-latest >= 2.6.23-0.rc8.1mdv
 %ifarch %ix86 x86_64
 BuildRequires: memtest86+
