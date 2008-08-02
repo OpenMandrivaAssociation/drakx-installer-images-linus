@@ -20,7 +20,7 @@ License: GPL
 Group:   Development/Other
 Url:     http://wiki.mandriva.com/Tools/DrakX
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: kernel-linus-latest >= 2.6.25-0.rc6.1mdv
+BuildRequires: kernel-linus-latest >= 2.6.27-0.rc1.2.1mdv2009
 %ifarch %ix86 x86_64
 BuildRequires: memtest86+
 BuildRequires: grub
