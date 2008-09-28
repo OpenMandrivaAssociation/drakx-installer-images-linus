@@ -1,7 +1,7 @@
 %define base_name drakx-installer-images
 %define name %{base_name}-linus
-%define version 1.30
-%define release %mkrel 2
+%define version 1.31
+%define release %mkrel 1
 %define theme 	Free
 
 %define mandriva_version %(rpm -q --queryformat '%{VERSION}-%{RELEASE}' mandriva-release)
@@ -20,13 +20,13 @@ License: GPL
 Group:   Development/Other
 Url:     http://wiki.mandriva.com/Tools/DrakX
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: kernel-linus-latest >= 2.6.27-0.rc6.1mdv2009.0
+BuildRequires: kernel-linus-latest >= 2.6.27-0.rc7.5.1mdv2009.0
 %ifarch %ix86 x86_64
 BuildRequires: memtest86+
 BuildRequires: grub
 BuildRequires: syslinux >= 3.51-4mdv2008.0
 %endif
-BuildRequires: drakx-installer-binaries >= 1.30-1mdv2009.0
+BuildRequires: drakx-installer-binaries >= 1.32-1mdv2009.0
 BuildRequires: ldetect-lst >= 0.1.199
 BuildRequires: mandriva-theme-%{theme}
 BuildRequires: pcmciautils
