@@ -26,7 +26,7 @@ BuildRequires: memtest86+
 BuildRequires: grub
 BuildRequires: syslinux >= 3.51-%mkrel 4
 %endif
-BuildRequires: drakx-installer-binaries >= 1.32-%mkrel 1
+BuildRequires: drakx-installer-binaries >= 1.32-1mdv
 BuildRequires: ldetect-lst >= 0.1.199
 BuildRequires: mandriva-theme-%{theme}
 BuildRequires: pcmciautils
