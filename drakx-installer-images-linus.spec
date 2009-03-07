@@ -1,8 +1,11 @@
 %define base_name drakx-installer-images
 %define name %{base_name}-linus
 %define version 1.35
-%define release %mkrel 1
+%define release %mkrel 2
 %define theme 	Free
+
+# version of kernel-linus we build against
+%define install_kernel kernel-linus-2.6.29-0.rc7.1mdv
 
 %define mandriva_version %(rpm -q --queryformat '%{VERSION}-%{RELEASE}' mandriva-release)
 
@@ -11,16 +14,15 @@
 %define debug_package           %{nil}
 
 Summary: DrakX installer images using kernel-linus series
-Name: %{name}
+Name:	 %{name}
 Version: %{version}
 Release: %{release}
 Source0: %{base_name}-%{version}.tar.bz2
-Patch0:  %{name}.patch
 License: GPL
 Group:   Development/Other
 Url:     http://wiki.mandriva.com/Tools/DrakX
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: kernel-linus-latest >= 2.6.29-0.rc7.%mkrel 1
+BuildRequires: %{install_kernel}
 %ifarch %ix86 x86_64
 BuildRequires: memtest86+
 BuildRequires: grub
@@ -44,10 +46,9 @@ images needed to build Mandriva installer (DrakX) using kernel-linus series
 
 %prep
 %setup -q -n %{base_name}-%{version} 
-%patch0 -p1
 
 %build
-THEME=Mandriva-%{theme} make -C images
+THEME=Mandriva-%{theme} make -C images KERNELS="%{install_kernel}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -62,7 +63,3 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root)
 %{_libdir}/%name
-
-
-
-
