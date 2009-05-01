@@ -26,9 +26,9 @@ BuildRequires: %{install_kernel} kernel-firmware
 %ifarch %ix86 x86_64
 BuildRequires: memtest86+
 BuildRequires: grub
-BuildRequires: syslinux >= 3.72-%mkrel 1
+BuildRequires: syslinux >= 3.72
 %endif
-BuildRequires: drakx-installer-binaries >= 1.39-%mkrel 1
+BuildRequires: drakx-installer-binaries >= 1.39
 BuildRequires: ldetect-lst >= 0.1.199
 BuildRequires: mandriva-theme-%{theme}
 BuildRequires: pcmciautils
