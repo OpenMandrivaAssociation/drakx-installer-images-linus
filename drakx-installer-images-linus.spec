@@ -1,7 +1,7 @@
 %define base_name drakx-installer-images
 %define name %{base_name}-linus
 %define version 1.41
-%define release %mkrel 10
+%define release %mkrel 11
 %define theme 	Free
 
 # version of kernel-linus we build against
