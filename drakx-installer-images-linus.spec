@@ -1,11 +1,11 @@
 %define base_name drakx-installer-images
 %define name %{base_name}-linus
-%define version 1.41
-%define release %mkrel 12
+%define version 1.43
+%define release %mkrel 1
 %define theme 	Free
 
 # version of kernel-linus we build against
-%define install_kernel kernel-linus-2.6.31-1mdv
+%define install_kernel kernel-linus-2.6.31.1-1mdv
 
 %define mandriva_version %(rpm -q --queryformat '%{VERSION}-%{RELEASE}' mandriva-release)
 
