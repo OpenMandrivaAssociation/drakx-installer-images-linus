@@ -23,7 +23,6 @@ Group:   Development/Other
 Url:     http://wiki.mandriva.com/Tools/DrakX
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: %{install_kernel} kernel-firmware
-BuildRequires: plymouth-theme-mdv
 %ifarch %ix86 x86_64
 BuildRequires: memtest86+
 BuildRequires: grub
