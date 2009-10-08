@@ -1,11 +1,11 @@
 %define base_name drakx-installer-images
 %define name %{base_name}-linus
-%define version 1.43
+%define version 1.44
 %define release %mkrel 1
 %define theme 	Free
 
 # version of kernel-linus we build against
-%define install_kernel kernel-linus-2.6.31.1-1mdv
+%define install_kernel kernel-linus-2.6.31.3-1mdv
 
 %define mandriva_version %(rpm -q --queryformat '%{VERSION}-%{RELEASE}' mandriva-release)
 
@@ -23,6 +23,7 @@ Group:   Development/Other
 Url:     http://wiki.mandriva.com/Tools/DrakX
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: %{install_kernel} kernel-firmware
+BuildRequires: plymouth-theme-mdv
 %ifarch %ix86 x86_64
 BuildRequires: memtest86+
 BuildRequires: grub
