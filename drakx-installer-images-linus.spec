@@ -1,7 +1,7 @@
 %define base_name drakx-installer-images
 %define name %{base_name}-linus
-%define version 1.46
-%define release %mkrel 2
+%define version 1.47
+%define release %mkrel 1
 %define theme 	Free
 
 # version of kernel-linus we build against
@@ -38,7 +38,7 @@ BuildRequires: cdrkit-genisoimage
 BuildRequires: mkdosfs-with-dir
 BuildRequires: mknod-m600
 BuildRequires: mtools
-Buildrequires: busybox
+Buildrequires: busybox-static
 Buildrequires: ka-deploy-source-node
 
 %description
