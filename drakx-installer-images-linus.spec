@@ -18,6 +18,7 @@ Name:	 %{name}
 Version: %{version}
 Release: %{release}
 Source0: %{base_name}-%{version}.tar.bz2
+Patch0:  images-make_boot_img.patch
 License: GPL
 Group:   Development/Other
 Url:     http://wiki.mandriva.com/Tools/DrakX
@@ -45,7 +46,8 @@ Buildrequires: ka-deploy-source-node
 images needed to build Mandriva installer (DrakX) using kernel-linus series
 
 %prep
-%setup -q -n %{base_name}-%{version} 
+%setup -q -n %{base_name}-%{version}
+%patch0 -p2
 
 %build
 THEME=Mandriva-%{theme} make -C images KERNELS="%{install_kernel}"
