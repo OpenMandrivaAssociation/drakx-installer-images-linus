@@ -46,7 +46,6 @@ images needed to build Mandriva installer (DrakX) using kernel-linus series
 
 %prep
 %setup -q -n %{base_name}-%{version}
-%patch0 -p2
 
 %build
 THEME=Mandriva-%{theme} make -C images KERNELS="%{install_kernel}"
