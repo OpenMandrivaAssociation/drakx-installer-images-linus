@@ -1,11 +1,11 @@
 %define base_name drakx-installer-images
 %define name %{base_name}-linus
-%define version 1.49
-%define release %mkrel 3
+%define version 1.50
+%define release %mkrel 1
 %define theme 	Free
 
 # version of kernel-linus we build against
-%define install_kernel kernel-linus-2.6.36-0.rc7.1mdv
+%define install_kernel kernel-linus-2.6.36-1mdv
 
 %define mandriva_version %(rpm -q --queryformat '%{VERSION}-%{RELEASE}' mandriva-release)
 
@@ -28,7 +28,7 @@ BuildRequires: memtest86+
 BuildRequires: grub
 BuildRequires: syslinux >= 3.72
 %endif
-BuildRequires: drakx-installer-binaries >= 1.46-2
+BuildRequires: drakx-installer-binaries >= 1.47
 BuildRequires: ldetect-lst >= 0.1.199
 BuildRequires: mandriva-theme-%{theme}
 BuildRequires: pcmciautils
