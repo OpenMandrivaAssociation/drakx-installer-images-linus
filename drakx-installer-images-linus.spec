@@ -18,6 +18,7 @@ Name:	 %{name}
 Version: %{version}
 Release: %{release}
 Source0: %{base_name}-%{version}.tar.bz2
+Patch0:  %{base_name}-use-mtools-for-images.patch
 License: GPL
 Group:   Development/Other
 Url:     http://wiki.mandriva.com/Tools/DrakX
@@ -35,7 +36,6 @@ BuildRequires: pcmciautils
 BuildRequires: perl-XML-Parser
 
 BuildRequires: cdrkit-genisoimage
-BuildRequires: mkdosfs-with-dir
 BuildRequires: mknod-m600
 BuildRequires: mtools
 Buildrequires: busybox-static
@@ -46,6 +46,7 @@ images needed to build Mandriva installer (DrakX) using kernel-linus series
 
 %prep
 %setup -q -n %{base_name}-%{version}
+%patch0 -p1
 
 %build
 THEME=Mandriva-%{theme} make -C images KERNELS="%{install_kernel}"
