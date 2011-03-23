@@ -30,7 +30,7 @@ BuildRequires: grub
 BuildRequires: syslinux >= 3.72
 %endif
 BuildRequires: drakx-installer-binaries >= 1.47
-BuildRequires: ldetect-lst >= 0.1.199
+BuildRequires: ldetect-lst >= 0.1.291-2
 BuildRequires: mandriva-theme-%{theme}
 BuildRequires: pcmciautils
 BuildRequires: perl-XML-Parser
