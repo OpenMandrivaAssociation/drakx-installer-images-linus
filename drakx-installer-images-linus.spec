@@ -37,7 +37,7 @@ BuildRequires: perl-XML-Parser
 
 BuildRequires: cdrkit-genisoimage
 BuildRequires: mknod-m600
-BuildRequires: mtools
+BuildRequires: mtools dosfstools
 Buildrequires: busybox-static
 Buildrequires: ka-deploy-source-node
 
