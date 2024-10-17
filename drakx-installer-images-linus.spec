@@ -21,7 +21,7 @@ Source0: %{base_name}-%{version}.tar.bz2
 Patch0:  %{base_name}-use-mtools-for-images.patch
 License: GPL
 Group:   Development/Other
-Url:     http://wiki.mandriva.com/Tools/DrakX
+Url:     https://wiki.mandriva.com/Tools/DrakX
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: %{install_kernel} kernel-firmware
 %ifarch %ix86 x86_64
