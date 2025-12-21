@@ -23,6 +23,7 @@ License: GPL
 Group:   Development/Other
 Url:     https://wiki.mandriva.com/Tools/DrakX
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRequires:	make
 BuildRequires: %{install_kernel} kernel-firmware
 %ifarch %ix86 x86_64
 BuildRequires: memtest86+
